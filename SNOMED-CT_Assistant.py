@@ -53,8 +53,8 @@ client = OpenAI(api_key=openai_api_key)
 model_tag = "gpt-3.5-turbo"
 
 def chat_input(prompt):
-    with st.sidebar:
-        st.write("You are talking with: ", model_tag)
+    # with st.sidebar:
+    #     st.write("You are talking with: ", model_tag)
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
     with st.spinner("Thinking..."):
